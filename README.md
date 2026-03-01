@@ -1,28 +1,41 @@
-# 🖼️ Image Compressor
+# 🖼️ Image Compressor (GUI App)
 
-A simple and efficient Python-based image compression tool that reduces image file size while preserving quality.
+A simple and user-friendly **desktop image compression tool** built using Python, Tkinter, and Pillow.
+
+This application allows you to select an image, adjust compression quality using a slider, and save a compressed version while viewing size reduction statistics.
 
 ---
 
 ## ✨ Features
 
-* Compress images with adjustable quality
-* Supports JPEG and PNG formats
-* Batch compression support
-* Lightweight and fast
-* Easy to use CLI
+* 🖱️ Easy-to-use graphical interface (Tkinter)
+* 🎚️ Adjustable compression quality (1–95)
+* 🖼️ Supports common image formats (JPG, PNG, etc.)
+* 💾 Save compressed image to custom location
+* 📊 Displays:
+
+  * Original file size
+  * Compressed file size
+  * Compression ratio
+* ⚡ Fast and lightweight
+
+---
+
+## 📸 Application Preview
+
+> GUI window with slider, button, and compression results
 
 ---
 
 ## 📂 Project Structure
 
-```
+```id="pj7m2p"
 image-compressor/
 │── compressor.py
 │── requirements.txt
 │── README.md
-│── .gitignore
 │── LICENSE
+│── .gitignore
 ```
 
 ---
@@ -31,14 +44,14 @@ image-compressor/
 
 ### 1. Clone the repository
 
-```bash
+```bash id="6o2i1v"
 git clone https://github.com/Moseskenny/image-compressor.git
 cd image-compressor
 ```
 
-### 2. Create virtual environment (recommended)
+### 2. Create a virtual environment (recommended)
 
-```bash
+```bash id="ts6k61"
 python -m venv venv
 source venv/bin/activate      # Linux / Mac
 venv\Scripts\activate         # Windows
@@ -46,64 +59,66 @@ venv\Scripts\activate         # Windows
 
 ### 3. Install dependencies
 
-```bash
+```bash id="k0x9n2"
 pip install -r requirements.txt
 ```
 
 ---
 
-## 🚀 Usage
+## 🚀 How to Use
 
-### Basic compression
+Run the application:
 
-```bash
-python compressor.py input.jpg output.jpg --quality 70
+```bash id="1g8zfh"
+python compressor.py
 ```
 
-### Batch compression
+### Steps:
 
-```bash
-python compressor.py ./input_folder ./output_folder --quality 60
+1. Click **"Select and Compress Image"**
+2. Choose your image file
+3. Choose where to save the compressed image
+4. Adjust compression quality using the slider
+5. View compression results instantly
+
+---
+
+## 🎚️ Compression Quality Guide
+
+| Quality Value | Result                             |
+| ------------- | ---------------------------------- |
+| 90–95         | High quality, larger file          |
+| 70–85         | Balanced compression               |
+| 40–60         | Smaller size, some quality loss    |
+| 1–30          | Maximum compression, lower quality |
+
+---
+
+## 📊 Example Output
+
+```
+
+Original size: 2048.00 KB  
+Compressed size: 620.00 KB  
+Compression ratio: 30.27%
+
 ```
 
 ---
 
-## 🔧 Configuration
+## 🧰 Technologies Used
 
-| Parameter   | Description                 |
-| ----------- | --------------------------- |
-| `--quality` | Compression quality (1–100) |
-| `input`     | Input image/folder          |
-| `output`    | Output image/folder         |
+* Python
+* Tkinter (GUI)
+* Pillow (PIL)
 
 ---
 
-## 🧠 How it works
+## 📦 Requirements
 
-The script uses the Pillow library to:
-
-1. Load image
-2. Optimize encoding
-3. Adjust compression quality
-4. Save reduced file size image
-
----
-
-## 📦 Dependencies
-
-* Python 3.x
-* Pillow
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the project
-2. Create a new branch
-3. Commit your changes
-4. Open a Pull Request
+```id="9pmgrl"
+Pillow
+```
 
 ---
 
@@ -120,6 +135,17 @@ GitHub: https://github.com/Moseskenny
 
 ---
 
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Submit a Pull Request
+
+---
+
 ## ⭐ Support
 
-If you like this project, please ⭐ the repo!
+If you like this project, please ⭐ the repository and share it!
